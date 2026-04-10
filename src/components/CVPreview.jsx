@@ -10,7 +10,7 @@ function CVPreview({ data, template }) {
   const componentRef = useRef();
 
   const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
+    contentRef: componentRef,
     documentTitle: `${data.name || 'CV'}_Resume`,
   });
 
